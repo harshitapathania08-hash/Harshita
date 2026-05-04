@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    overflow: visible !important;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #c9a0dc;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #c9a0dc;
+    border-bottom: 3px solid #c9a0dc;
+}
+
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 5rem;
+    background-color: black;
+}
+
+.heading {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+
+h1 span, h3 span {
+    color: #c9a0dc;
+    transition: 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+}
+
+h1 span:hover, 
+h3 span:hover {
+    text-shadow: 0 0 20px #c9a0dc, 0 0 40px #c9a0dc;
+    filter: brightness(1.3);
+    transform: scale(1.05);
+}
+
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+
+.home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.home-img img {
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #c9a0dc;
+    transition: 0.3s ease;
+}
+
+.home-img img:hover {
+    box-shadow: 0 0 50px #c9a0dc;
+    transform: scale(1.02);
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #c9a0dc;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 1rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #c9a0dc;
+}
+
+.social-icons a:hover {
+    color: black;
+    background-color: #c9a0dc;
+    transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 25px #c9a0dc;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #c9a0dc;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    border: 2px solid #c9a0dc;
+    transition: 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.btn:hover {
+    background-color: #c9a0dc;
+    color: black;
+    box-shadow: 0 0 20px #c9a0dc;
+}
+
+.contact-dropdown {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    width: 250px;
+    background-color: #111111;
+    border: 2px solid #c9a0dc;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+    pointer-events: none;
+    z-index: 2000;
+}
+
+.contact-btn:hover .contact-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(10px);
+    pointer-events: auto;
+}
+
+.contact-dropdown p {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    letter-spacing: 0;
+    text-align: left;
+}
+
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2.5rem;
+}
+
+.skill-box {
+    background-color: #111111;
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    border: 0.2rem solid #c9a0dc;
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-10px);
+    background-color: #c9a0dc;
+    color: black;
+}
+
+.skill-box i {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    color: #c9a0dc;
+}
+
+.skill-box:hover i {
+    color: black;
+}
+
+
+.education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 10rem;
+}
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem; 
+    max-width: 900px;
+    width: 100%;
+}
+
+.education-box {
+    position: relative;
+    border-left: 0.3rem solid #c9a0dc; 
+    padding-left: 3rem;
+    margin-left: 2rem;
+}
+
+
+.education-box::before {
+    content: '';
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #c9a0dc;
+    border-radius: 50%;
+    left: -0.9rem;
+    top: 0;
+    box-shadow: 0 0 10px #c9a0dc;
+}
+
+.education-content .content {
+    background: #111111;
+    border: 0.2rem solid #c9a0dc;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    transition: 0.4s ease;
+}
+
+.education-content .content:hover {
+    box-shadow: 0 0 20px #c9a0dc;
+    transform: scale(1.02);
+}
+
+.education-content h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.education-content p {
+    font-size: 1.6rem; 
+    font-weight: 500;  
+    line-height: 1.8;  
+    color: white;
+}
+
+.year {
+    font-size: 1.6rem;
+    color: #c9a0dc;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.year i {
+    margin-right: 1rem;
+}
+
+
+.typing-text span::before {
+    content: "Software Engineer";
+    color: #c9a0dc;
+}
+
+
+@media (max-width: 995px) {
+    header { padding: 2rem 4%; }
+    .home { flex-direction: column-reverse; text-align: center; }
+    .home-content h1 { font-size: 5rem; }
+    .home-img img { width: 70vw; }
+    nav { display: none; } 
+}
